@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-11T00:47:50 EET" name="Default suite" finished-at="2024-05-11T00:49:50 EET" duration-ms="120117">
+  <suite started-at="2024-05-11T19:13:52 EET" name="Default suite" finished-at="2024-05-11T19:16:21 EET" duration-ms="149864">
     <groups>
     </groups>
-    <test started-at="2024-05-11T00:47:50 EET" name="Default test" finished-at="2024-05-11T00:49:50 EET" duration-ms="120117">
-      <class name="SearchResultsPage">
-        <test-method is-config="true" signature="GoWebsite()[pri:0, instance:SearchResultsPage@fc258b1]" started-at="2024-05-11T00:47:50 EET" name="GoWebsite" finished-at="2024-05-11T00:47:53 EET" duration-ms="2955" status="PASS">
+    <test started-at="2024-05-11T19:13:52 EET" name="Default test" finished-at="2024-05-11T19:16:21 EET" duration-ms="149864">
+      <class name="SortingByLowestPrice">
+        <test-method is-config="true" signature="GoWebsite()[pri:0, instance:SortingByLowestPrice@5911e990]" started-at="2024-05-11T19:13:52 EET" name="GoWebsite" finished-at="2024-05-11T19:13:54 EET" duration-ms="2650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GoWebsite -->
-        <test-method signature="CheakSearchResults()[pri:0, instance:SearchResultsPage@fc258b1]" started-at="2024-05-11T00:47:53 EET" name="CheakSearchResults" finished-at="2024-05-11T00:49:50 EET" duration-ms="117091" status="PASS">
+        <test-method signature="CheskSortingByLowestPrice()[pri:0, instance:SortingByLowestPrice@5911e990]" started-at="2024-05-11T19:13:54 EET" name="CheskSortingByLowestPrice" finished-at="2024-05-11T19:16:21 EET" duration-ms="147147" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheakSearchResults -->
-      </class> <!-- SearchResultsPage -->
+        </test-method> <!-- CheskSortingByLowestPrice -->
+      </class> <!-- SortingByLowestPrice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
