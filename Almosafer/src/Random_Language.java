@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class Random_Language extends Setup
 {
-/*
+
 	@Test(invocationCount = 4)
 	public void CheakRandomlanguage() throws InterruptedException {
 		
@@ -28,7 +28,7 @@ public class Random_Language extends Setup
 		}
 		
 		
-	}*/
+	}
 	
 	
 	
