@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class HotelSearch extends Setup
 
 {
-	/*
+	
 	@Test()
 	public void CheakHotelSearch() throws InterruptedException {
 		
@@ -29,10 +29,12 @@ public class HotelSearch extends Setup
 			Thread.sleep(3000);
 			//driver.findElement(By.xpath("//a[normalize-space()='English']")).click();
 			
-			driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/nav/a[2]/div")).click();
-			Thread.sleep(3000);
+		WebElement locateHotle=	driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/nav/a[2]/div"));
+			javaScript(locateHotle);
+			locateHotle.click();
+		Thread.sleep(3000);
 		WebElement locateCity = driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/div/div[2]/div/div/div/div[1]/div/div[1]/div/div/input"));
-		
+		javaScript(locateCity);
 		     locateCity.sendKeys(cityEn[numberEn]);;
 			driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/div/div[2]/div/div/div/div[1]/div/div/div/ul/li[2]")).click();
 			
@@ -46,14 +48,17 @@ public class HotelSearch extends Setup
 		}else
 		{
 			Thread.sleep(3000);
-			driver.findElement(By.xpath("//a[contains(text(),'العربية')]")).click();
-			
-	       driver.findElement(By.xpath("//a[@id='uncontrolled-tab-example-tab-hotels']")).click();
+		WebElement locateLang=	driver.findElement(By.xpath("//a[contains(text(),'العربية')]"));
+			javaScript(locateLang);
+			locateLang.click();
+	    WebElement locateHotel=   driver.findElement(By.xpath("//a[@id='uncontrolled-tab-example-tab-hotels']"));
+	     javaScript(locateHotel);
+	     locateHotel.click();
 			
 			
 		
 			WebElement locateCity = driver.findElement(By.xpath("//input[@placeholder='البحث عن فنادق أو وجهات']"));
-			
+			javaScript(locateCity);
 			locateCity.sendKeys(cityAr[numberAr]);
 			
 			driver.findElement(By.xpath("//li[@class='sc-phbroq-5 dxuHWJ AutoComplete__ListItem AutoComplete__ListItem--highlighted AutoComplete__ListItem ']")).click();
@@ -68,5 +73,5 @@ public class HotelSearch extends Setup
 
 		
 	}
-*/
+
 }

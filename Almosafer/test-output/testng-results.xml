@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-12T00:57:59 EET" name="Default suite" finished-at="2024-05-12T00:58:53 EET" duration-ms="54668">
+  <suite started-at="2024-05-12T17:40:42 EET" name="Default suite" finished-at="2024-05-12T17:41:26 EET" duration-ms="44243">
     <groups>
     </groups>
-    <test started-at="2024-05-12T00:57:59 EET" name="Default test" finished-at="2024-05-12T00:58:53 EET" duration-ms="54668">
-      <class name="Random_Language">
-        <test-method is-config="true" signature="GoWebsite()[pri:0, instance:Random_Language@5911e990]" started-at="2024-05-12T00:57:59 EET" name="GoWebsite" finished-at="2024-05-12T00:58:02 EET" duration-ms="3400" status="PASS">
+    <test started-at="2024-05-12T17:40:42 EET" name="Default test" finished-at="2024-05-12T17:41:26 EET" duration-ms="44243">
+      <class name="HomePage">
+        <test-method is-config="true" signature="GoWebsite()[pri:0, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:40:42 EET" name="GoWebsite" finished-at="2024-05-12T17:40:45 EET" duration-ms="3093" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GoWebsite -->
-        <test-method signature="CheakRandomlanguage()[pri:0, instance:Random_Language@5911e990]" started-at="2024-05-12T00:58:02 EET" name="CheakRandomlanguage" finished-at="2024-05-12T00:58:25 EET" duration-ms="22945" status="PASS">
+        <test-method signature="FlightDepartureDate()[pri:1, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:40:45 EET" name="FlightDepartureDate" finished-at="2024-05-12T17:40:52 EET" duration-ms="6810" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheakRandomlanguage -->
-        <test-method signature="CheakRandomlanguage()[pri:0, instance:Random_Language@5911e990]" started-at="2024-05-12T00:58:25 EET" name="CheakRandomlanguage" finished-at="2024-05-12T00:58:53 EET" duration-ms="28249" status="PASS">
+        </test-method> <!-- FlightDepartureDate -->
+        <test-method signature="FlightReturnDate()[pri:2, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:40:52 EET" name="FlightReturnDate" finished-at="2024-05-12T17:40:57 EET" duration-ms="5100" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheakRandomlanguage -->
-      </class> <!-- Random_Language -->
+        </test-method> <!-- FlightReturnDate -->
+        <test-method signature="CheckHotelsNOTSelected()[pri:3, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:40:57 EET" name="CheckHotelsNOTSelected" finished-at="2024-05-12T17:41:05 EET" duration-ms="8117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckHotelsNOTSelected -->
+        <test-method signature="CheckDefaultlanguageEN()[pri:4, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:41:05 EET" name="CheckDefaultlanguageEN" finished-at="2024-05-12T17:41:07 EET" duration-ms="2093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckDefaultlanguageEN -->
+        <test-method signature="CheckDefaultCurrency()[pri:5, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:41:07 EET" name="CheckDefaultCurrency" finished-at="2024-05-12T17:41:10 EET" duration-ms="2105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckDefaultCurrency -->
+        <test-method signature="CheckLogo()[pri:6, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:41:10 EET" name="CheckLogo" finished-at="2024-05-12T17:41:17 EET" duration-ms="7174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckLogo -->
+        <test-method signature="CheakContactNumbers()[pri:7, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:41:17 EET" name="CheakContactNumbers" finished-at="2024-05-12T17:41:26 EET" duration-ms="9270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheakContactNumbers -->
+        <test-method is-config="true" signature="EndTest()[pri:0, instance:HomePage@2d1dee39]" started-at="2024-05-12T17:41:26 EET" name="EndTest" finished-at="2024-05-12T17:41:26 EET" duration-ms="380" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EndTest -->
+      </class> <!-- HomePage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

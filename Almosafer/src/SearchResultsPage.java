@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class SearchResultsPage extends Setup{
 	
-	/*
+	
 	@Test()
    public void CheakSearchResults() throws InterruptedException {
 		
@@ -77,7 +77,7 @@ public class SearchResultsPage extends Setup{
 	}
 
 
-*/
+
 
 	
 

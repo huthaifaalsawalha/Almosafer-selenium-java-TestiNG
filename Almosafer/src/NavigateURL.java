@@ -2,9 +2,9 @@ import org.testng.annotations.Test;
 
 public class NavigateURL extends Setup {
 
-	/*
-	@Test()
-	public void CheakNavigateURL() {
+	
+	@Test(priority = 8)
+	public void CheakNavigateURL() throws InterruptedException {
 		
 		
 		String acualUrl = driver.getCurrentUrl();
@@ -14,8 +14,8 @@ public class NavigateURL extends Setup {
 		myassert.assertEquals(acualUrl, expectedUrl);
 		myassert.assertAll();
 		
-		
-	}*/
+	
+	}
 	
 	
 }

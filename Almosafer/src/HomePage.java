@@ -12,20 +12,15 @@ import com.fasterxml.jackson.databind.util.Converter;
 public class HomePage extends Setup {
 
 	
-/*@Test()
-public void Cheaklanguage_EN () {
-	
-	
-	
-	
-}
 
 
-@Test()
+
+@Test(priority = 1)
 public void FlightDepartureDate () throws InterruptedException {
 	
 	Thread.sleep(3000);
-	WebElement locateDate = driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/div/div[1]/div/div[2]/div[1]/div/div[3]/div/div/div/div[1]/span[2]"));
+	WebElement locateDate = driver.findElement(By.xpath("//span[normalize-space()='13']"));
+	javaScript(locateDate);
 	String ValueDate= locateDate.getAttribute("innerText");
 	int currentDay = LocalDate.now().getDayOfMonth()+1;
 	String expictedDay =String.valueOf(currentDay) ;
@@ -37,11 +32,12 @@ public void FlightDepartureDate () throws InterruptedException {
 }
 	
 	
-@Test()
+@Test(priority = 2)
 public void FlightReturnDate () throws InterruptedException {
 	
 	Thread.sleep(3000);
 	WebElement locateDate = driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/div/div[1]/div/div[2]/div[1]/div/div[3]/div/div/div/div[2]/span[2]"));
+	javaScript(locateDate);
 	String ValueDate= locateDate.getAttribute("innerText");
 	int currentDay = LocalDate.now().getDayOfMonth()+2;
 	String expictedDay =String.valueOf(currentDay) ;
@@ -52,13 +48,13 @@ public void FlightReturnDate () throws InterruptedException {
 	
 }
 
-@Test()
+@Test(priority = 3)
 public void CheckHotelsNOTSelected() throws InterruptedException {
 	Thread.sleep(3000);
 	//driver.findElement(By.xpath("//a[normalize-space()='English']")).click();;
 	Thread.sleep(3000);
 	WebElement locateHotal= driver.findElement(By.xpath("//a[@id='uncontrolled-tab-example-tab-hotels']"));
-	
+	javaScript(locateHotal);
     boolean acualValue = Boolean.parseBoolean(locateHotal.getAttribute("aria-selected"));
     boolean expectedValue = false;
 	myassert.assertEquals(acualValue, expectedValue);
@@ -66,11 +62,11 @@ public void CheckHotelsNOTSelected() throws InterruptedException {
 	
 	}
 
-@Test()
-public void CheckDefaultlanguageEN() {
+@Test(priority = 4)
+public void CheckDefaultlanguageEN() throws InterruptedException {
 	
 	WebElement textLocated = driver.findElement(By.xpath("//h1[contains(text(),'Let’s book your next trip!')]"));
-	
+	javaScript(textLocated);
 	String acualText = textLocated.getAttribute("innerText");
 	String expectText = "Let’s book your next trip!";
 	myassert.assertEquals(acualText, expectText);
@@ -80,12 +76,12 @@ public void CheckDefaultlanguageEN() {
 
 
 
-@Test()
-public void CheckDefaultCurrency() {
+@Test(priority = 5)
+public void CheckDefaultCurrency() throws InterruptedException {
 	
 	
 	WebElement locateCurrency = driver.findElement(By.xpath("//button[normalize-space()='SAR']"));
-	
+	javaScript(locateCurrency);
 	String acualCurrency = locateCurrency.getText();
 	String expectedCurrency = "SAR";
 	myassert.assertEquals(acualCurrency, expectedCurrency);
@@ -94,12 +90,13 @@ public void CheckDefaultCurrency() {
 	
 }
 
-@Test()
+@Test(priority = 6)
 public void CheckLogo() throws InterruptedException {
 	Thread.sleep(3000);
 	WebElement locatelogo= driver.findElement(By.xpath("//div[@class='sc-fihHvN eYrDjb']"));
+	javaScript(locatelogo);
 	List<WebElement> logo = locatelogo.findElements(By.tagName("svg"));
-	
+	javaScript(logo.get(0));
 	String acuallogo = logo.get(0).getAttribute("data-testid");
 	String expectLogo = "Footer__QitafLogo";
 	myassert.assertEquals(acuallogo, expectLogo);
@@ -110,7 +107,7 @@ public void CheckLogo() throws InterruptedException {
 
 
 
-@Test
+@Test(priority = 7)
 public void CheakContactNumbers() throws InterruptedException {
 	Thread.sleep(3000);
 	String expextNumber1= "920000997";
@@ -119,12 +116,12 @@ public void CheakContactNumbers() throws InterruptedException {
 	
 	
 	WebElement locateNumber1= driver.findElement(By.xpath("//h4[normalize-space()='920000997']"));
-    
+    javaScript(locateNumber1);
 	
 	WebElement locateNumber2= driver.findElement(By.xpath("//strong[normalize-space()='+966554400000']"));
-    
+	  javaScript(locateNumber2);
 	WebElement locateNumber3= driver.findElement(By.xpath("//a[normalize-space()='+966 55 440 0000']"));
-    
+	  javaScript(locateNumber3);
 	String acualNumber1=locateNumber1.getAttribute("innerText");
 	String acualNumber2=locateNumber2.getAttribute("innerText");
 	String acualNumber3=locateNumber3.getAttribute("innerText");
@@ -139,7 +136,7 @@ public void CheakContactNumbers() throws InterruptedException {
 	
 	
 	
-}*/
+}
 
 
 	

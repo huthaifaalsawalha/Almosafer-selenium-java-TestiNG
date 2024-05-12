@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
@@ -41,6 +42,12 @@ public class Setup {
 	}
 	
 
+	@AfterTest()
+	public void EndTest() {
+		
+		driver.quit();
+	}
+	
 	
 	
 }
