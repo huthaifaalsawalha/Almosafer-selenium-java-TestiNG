@@ -5,17 +5,19 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class HotelSearch extends Setup
 
 {
 
-	@Test(priority = 9)
+	@Test
 	public void CheakHotelSearch() throws InterruptedException {
 
      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
+     test=  extent.createTest("Test HotelSearch", "Verify Hotel Search");
      Random random =  new Random();
      int numberEn = random.nextInt(3);
      int numberAr = random.nextInt(2);
@@ -30,14 +32,14 @@ public class HotelSearch extends Setup
 			Thread.sleep(3000);
 			//driver.findElement(By.xpath("//a[normalize-space()='English']")).click();
 
-		WebElement locateHotle=	driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/nav/a[2]/div"));
+		WebElement locateHotle=	driver.findElement(By.xpath("//a[@id='uncontrolled-tab-example-tab-hotels']"));
 			javaScript(locateHotle);
 			locateHotle.click();
 		Thread.sleep(3000);
-		WebElement locateCity = driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/div/div[2]/div/div/div/div[1]/div/div[1]/div/div/input"));
+		WebElement locateCity = driver.findElement(By.xpath("//input[@placeholder='Search for hotels or places']"));
 		javaScript(locateCity);
 		     locateCity.sendKeys(cityEn[numberEn]);
-			driver.findElement(By.xpath("/html/body/div[2]/section[2]/div[4]/div/div/div/div[2]/div/div/div/div[1]/div/div/div/ul/li[2]")).click();
+			driver.findElement(By.xpath("//li[@class='sc-phbroq-5 iNcvxX AutoComplete__ListItem AutoComplete__ListItem--highlighted AutoComplete__ListItem ']")).click();
 
 			String acualCity = locateCity.getAttribute("value");
 
@@ -71,8 +73,38 @@ public class HotelSearch extends Setup
 
 		}
 
+		
 
 
+	}
+	
+	@AfterMethod
+	public void tearDown(ITestResult result) throws Exception {
+		  Random random =new Random();
+		  int num = random.nextInt();
+		  String path="C:\\Users\\alsaw\\OneDrive\\Desktop\\New folder (5)\\test"+num+".png";
+	 if(result.FAILURE==result.getStatus())
+	 {
+		   
+			  test.fail(" Not Successfully");
+			  //test.info(Status.FAIL, Status.INFO);
+			  test.fail(result.getThrowable());
+			//  test.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
+				takeSnapShot(driver,path) ;
+			  test.addScreenCaptureFromPath(path);
+			  
+	 }else if(result.SUCCESS==result.getStatus()) {
+		   test.pass("Successfully");
+		 
+		   
+		   
+		   
+	}else {
+		
+		 test.skip("Skip Test");
+		 test.skip(result.getThrowable());
+		
+	}
 	}
 
 }

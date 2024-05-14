@@ -3,21 +3,23 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="almosafer.HotelSearch">
+        <methods>
+          <include name="EndReport"/>
+          <include name="CheakHotelSearch"/>
+          <include name="tearDown"/>
+          <include name="GoWebsite"/>
+        </methods>
+      </class> <!-- almosafer.HotelSearch -->
       <class name="almosafer.HomePage">
         <methods>
           <include name="FlightReturnDate"/>
-          <include name="EndTest"/>
+          <include name="EndReport"/>
+          <include name="tearDown"/>
           <include name="FlightDepartureDate"/>
           <include name="GoWebsite"/>
         </methods>
       </class> <!-- almosafer.HomePage -->
-      <class name="almosafer.HotelSearch">
-        <methods>
-          <include name="EndTest"/>
-          <include name="CheakHotelSearch"/>
-          <include name="GoWebsite"/>
-        </methods>
-      </class> <!-- almosafer.HotelSearch -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

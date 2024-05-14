@@ -3,33 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="HomePage">
+      <class name="almosafer.HotelSearch">
         <methods>
-          <include name="CheckLogo"/>
+          <include name="EndReport"/>
+          <include name="CheakHotelSearch"/>
+          <include name="tearDown"/>
           <include name="GoWebsite"/>
-          <include name="CheckDefaultlanguageEN"/>
-          <include name="EndTest"/>
-          <include name="CheckHotelsNOTSelected"/>
-          <include name="CheakContactNumbers"/>
-          <include name="CheckDefaultCurrency"/>
-          <include name="FlightDepartureDate"/>
-          <include name="FlightReturnDate"/>
         </methods>
-      </class> <!-- HomePage -->
-      <class name="NavigateURL">
-        <methods>
-          <include name="CheakNavigateURL"/>
-          <include name="GoWebsite"/>
-          <include name="EndTest"/>
-        </methods>
-      </class> <!-- NavigateURL -->
-      <class name="SortingByLowestPrice">
-        <methods>
-          <include name="GoWebsite"/>
-          <include name="EndTest"/>
-          <include name="CheskSortingByLowestPrice"/>
-        </methods>
-      </class> <!-- SortingByLowestPrice -->
+      </class> <!-- almosafer.HotelSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
